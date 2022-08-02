@@ -1,6 +1,4 @@
 import { LikeWidgetModule } from "./like-widget.module";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { UniqueIdService } from "./../../services/unique-id/unique-id.service";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { LikeWidgetComponent } from "./like-widget.component";
 
@@ -19,9 +17,4 @@ describe(LikeWidgetComponent.name, () => {
         const instance = fixture.componentInstance;
         expect(instance).toBeTruthy();
     });
-
-    it('#grita should return true when called', () => {
-        const instance = fixture.componentInstance;
-        expect(instance.grita()).toBeTrue();
-    })
 });
