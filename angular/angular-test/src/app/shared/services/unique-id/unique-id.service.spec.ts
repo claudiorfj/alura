@@ -1,3 +1,4 @@
+import { empty } from "rxjs";
 import { UniqueIdService } from "./unique-id.service";
 
 describe(UniqueIdService.name, () => {
@@ -31,8 +32,11 @@ describe(UniqueIdService.name, () => {
 
     it(`#${UniqueIdService.prototype.generateUniqueIdeWithPrefix.name}
         should throw when called with empty`, () => {
-            expect(() => service.generateUniqueIdeWithPrefix(null)).toThrow();
-            expect(() => service.generateUniqueIdeWithPrefix(undefined)).toThrow();
-            expect(() => service.generateUniqueIdeWithPrefix('')).toThrow();
+        const emptyValues = [null, undefined, ""];
+        emptyValues.forEach((emptyValues) => {
+            expect(() =>
+                service.generateUniqueIdeWithPrefix(emptyValues)
+            ).toThrow();
+        });
     });
 });
