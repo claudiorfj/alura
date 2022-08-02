@@ -1,10 +1,13 @@
-<div class="like-wdiget-container"
-    (click)="like()">
-    <fa-icon
-        [icon]="fonts.faThumbsUp">
-
+<div class="like-wdiget-container" (click)="like()" (keyup.enter)="like()">
+    <fa-icon role="button" tabindex="0" size="1x" [attr.aria-describedby]="id" [icon]="fonts.faThumbsUp">
     </fa-icon>
-    <span class="like-counter">
+    <span
+        [attr.id]="id"
+        [attr.aria-label]="likes + ': people liked'"
+        class="like-counter"
+        aria-live="true"
+        aria-atomic="true"
+    >
         {{ likes }}
     </span>
 </div>
