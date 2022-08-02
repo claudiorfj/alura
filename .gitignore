@@ -3,5 +3,6 @@ node_modules
 *.txt
 .env
 .sass-cache
+.gitignore
 
 #MODELO GIT IGNORE
