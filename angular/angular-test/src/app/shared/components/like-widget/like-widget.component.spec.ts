@@ -19,4 +19,9 @@ describe(LikeWidgetComponent.name, () => {
         const instance = fixture.componentInstance;
         expect(instance).toBeTruthy();
     });
+
+    it('#grita should return true when called', () => {
+        const instance = fixture.componentInstance;
+        expect(instance.grita()).toBeTrue();
+    })
 });
