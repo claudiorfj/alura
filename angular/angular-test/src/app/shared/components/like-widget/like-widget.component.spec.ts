@@ -14,7 +14,12 @@ describe(LikeWidgetComponent.name, () => {
     });
 
     it("Should create component", () => {
-        const instance = fixture.componentInstance;
-        expect(instance).toBeTruthy();
+        const component = fixture.componentInstance;
+        expect(component).toBeTruthy();
     });
+
+    it ('Should auto generate ID when id input property is missing', () => {
+        const component = fixture.componentInstance
+        expect(component.id).toBeTruthy()
+    })
 });
